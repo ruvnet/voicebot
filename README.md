@@ -1,7 +1,4 @@
  # AI-Powered Phone Conversation Bot
-<a href="https://ai-convo.replit.app/">
-  <img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="270px">
-</a>
 
 This application allows users to practice mock interviews or engage in various AI-driven conversations over the phone. It utilizes Flask as the backend framework and a third-party API for handling phone calls and voice interactions.
 
@@ -9,7 +6,9 @@ This application allows users to practice mock interviews or engage in various A
 https://ai-convo.replit.app/
 
 ## Features
-
+<a href="https://ai-convo.replit.app/">
+  <img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="270px">
+</a>
 - **AI-Powered Conversations**: Select from a variety of conversation types, including mock interviews (e.g., sales, cloud computing, HR), personal guidance (e.g., therapy, counseling), or fun engagements (e.g., virtual boyfriend/girlfriend, gamer friend).
 - **Voice Selection**: Choose from different AI voices for the interaction.
 - **Phone Call Integration**: Users receive a phone call to simulate the conversation, offering a more realistic practice experience.
