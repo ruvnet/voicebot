@@ -1,5 +1,5 @@
  # AI-Powered Phone Conversation Bot
-<img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="left" width="200px">
+<img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="250px">
 
 This application allows users to practice mock interviews or engage in various AI-driven conversations over the phone. It utilizes Flask as the backend framework and a third-party API for handling phone calls and voice interactions.
 
