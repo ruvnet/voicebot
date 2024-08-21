@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set your API key
-API_KEY="vcttvwsdkwagg92q4nwzdbs3tfdl7raqws03gblo9j2ewolv8f74h4tg7hqg4e9g69"
+API_KEY="your-api-key"
 
 # Set the API URL
 API_URL="https://api.bland.ai/v1/calls"

@@ -13,7 +13,7 @@ async def root():
 CALENDLY_API_BASE_URL = "https://api.calendly.com"
 
 # Your Personal Access Token
-CALENDLY_ACCESS_TOKEN = "eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzI0MjU1NDA3LCJqdGkiOiIwNDBkNGE3OS0xN2JmLTQ4OGUtYTVhMy1mZmE1ZDFjYmQ5NmMiLCJ1c2VyX3V1aWQiOiJHQ0dFQ0w1TVEzSUNNTUxLIn0.bu2hj8C00Oc9-VVAuPvZ73dKrBghHVGLsln6D0zf9o-LgvkSh18YU88WYlbJCWL1e_571IeESR3gHLagK9_8ug"
+CALENDLY_ACCESS_TOKEN = "your_access_token_here"
 
 @app.get("/get_user_uuid")
 async def get_user_uuid():
