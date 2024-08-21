@@ -7,7 +7,7 @@ https://ai-convo.replit.app/
 
 ## Features
 <a href="https://ai-convo.replit.app/">
-  <img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="270px">
+  <img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="370px">
 </a>
 
 - **AI-Powered Conversations**: Select from a variety of conversation types, including mock interviews (e.g., sales, cloud computing, HR), personal guidance (e.g., therapy, counseling), or fun engagements (e.g., virtual boyfriend/girlfriend, gamer friend).
