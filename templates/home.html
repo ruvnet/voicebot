@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Bot - Practice Your Interview Skills</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
     
@@ -25,20 +29,82 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontSize: {
+                        'xs': '.75rem',
+                        'sm': '.875rem',
+                        'base': '1rem',
+                        'lg': '1.125rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
+                        '5xl': '3rem',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 640px) {
+            html, body {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
         function showLoading() {
             document.getElementById('loadingMessage').classList.remove('hidden');
             document.getElementById('submitButton').disabled = true;
         }
+
+        function hideLoading() {
+            document.getElementById('loadingMessage').classList.add('hidden');
+            document.getElementById('submitButton').disabled = false;
+        }
+
+        function showMessage(message, isError = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-4 mb-4 text-sm rounded-lg ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`;
+            messageDiv.textContent = message;
+            document.querySelector('form').insertAdjacentElement('afterend', messageDiv);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            showLoading();
+
+            const formData = new FormData(event.target);
+
+            fetch("{{ url_for('start_call') }}", {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                hideLoading();
+                showMessage('Call started successfully! You should receive a call shortly.');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                hideLoading();
+                showMessage(`An error occurred: ${error.message}`, true);
+            });
+        }
     </script>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-    <div class="container mx-auto px-4 py-8 max-w-full md:max-w-md">
-        <h1 class="text-3xl font-bold mb-2 text-center text-gray-800">AI Conversation Bot</h1>
-        <h2 class="text-xl mb-6 text-center text-gray-600">Phone-Based AI-Powered Assistant for Mock Interviews and Personal Guidance</h2>
-        <div class="bg-white shadow-md rounded px-4 py-6 sm:px-8 sm:pt-6 sm:pb-8 mb-4">
-            <p class="mb-4 text-gray-700">Refine your skills with our AI-powered phone call system. Choose an interview type, select a voice, and enter your phone number to start an interactive AI conversation.</p>
-            <form action="{{ url_for('start_call') }}" method="POST" class="mb-4" onsubmit="showLoading()">
-                <div class="mb-4">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="container mx-auto max-w-md w-full">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-2 text-center text-gray-800">AI Conversation Bot</h1>
+        <h2 class="text-lg sm:text-xl mb-6 text-center text-gray-600">Phone-Based AI-Powered Assistant for Mock Interviews and Personal Guidance</h2>
+        <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
+            <p class="mb-6 text-gray-700 text-sm sm:text-base">Refine your skills with our AI-powered phone call system. Choose an interview type, select a voice, and enter your phone number to start an interactive AI conversation.</p>
+            <form action="{{ url_for('start_call') }}" method="POST" class="mb-6" onsubmit="handleSubmit(event)">
+                <div class="mb-6">
                     <label for="interview_type" class="block text-gray-700 text-sm font-bold mb-2">Select Interview Type:</label>
                     <select id="interview_type" name="interview_type" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="default">AI Interview Bot (Default)</option>
@@ -73,7 +139,7 @@
                         <option value="life_coach">Life Coach</option>
                     </select>            
                 </div>
-                <div class="mb-4">
+                <div class="mb-6">
                     <label for="voice" class="block text-gray-700 text-sm font-bold mb-2">Select Voice:</label>
                     <select id="voice" name="voice" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="nat">Nat</option>
@@ -85,7 +151,7 @@
                         <option value="evelyn">Evelyn</option>
                     </select>
                 </div>
-                <div class="mb-4">
+                <div class="mb-6">
                     <label for="phone_number" class="block text-gray-700 text-sm font-bold mb-2">Enter your phone number:</label>
                     <input type="tel" id="phone_number" name="phone_number" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
                 </div>
@@ -98,17 +164,6 @@
             <div id="loadingMessage" class="hidden mt-4 text-center text-gray-700">
                 Please wait while we initiate your call...
             </div>
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    <div class="mt-4">
-                        {% for category, message in messages %}
-                            <div class="p-4 mb-4 text-sm rounded-lg {% if category == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %}" role="alert">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            {% endwith %}
         </div>
         <p class="text-center text-gray-500 text-xs">
             &copy; AI Conversation Bot. No rights reserved, Go Crazy 🤪<br>
