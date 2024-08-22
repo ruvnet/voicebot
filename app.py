@@ -46,7 +46,7 @@ INTERVIEW_PROMPTS = {
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', interview_prompts=INTERVIEW_PROMPTS)
 
 @app.route('/start-call', methods=['POST'])
 def start_call():

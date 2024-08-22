@@ -7,7 +7,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
-    
+
     <!-- SEO Metadata -->
     <meta name="description" content="AI Interview Bot - Practice your interview skills with our AI-powered automated phone call system. Improve your chances of landing your dream job!">
     <meta name="keywords" content="AI, Interview, Practice, Job Skills, Career Development, Phone Interview">
@@ -53,8 +53,124 @@
                 font-size: 16px;
             }
         }
+
+        /* Hide inactive tab content */
+        .tabcontent {
+            display: none;
+        }
+
+        /* Show active tab content */
+        .tabcontent.active {
+            display: block;
+        }
+
+        /* Folder style for tabs */
+        .tablinks {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            margin-right: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tablinks.active {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        /* Tab container height to avoid UI adjustment */
+        .tabcontainer {
+            min-height: 500px; /* Set a fixed minimum height */
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 8px 8px 8px;
+        }
+
+        /* Remove padding or margin below tab buttons */
+        .tabs ul {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        /* Adjust spacing between subheader and tabs */
+        .subheader {
+            margin-bottom: 16px; /* Reduced margin */
+        }
     </style>
     <script>
+        let currentPrompt = '';
+        let promptTabOpened = false;
+
+        function syncDropdowns() {
+            const interviewType = document.getElementById('interview_type');
+            const promptType = document.getElementById('promptType');
+
+            // Sync the dropdowns when one changes
+            interviewType.addEventListener('change', function() {
+                promptType.value = interviewType.value;
+                loadPrompt(interviewType.value);
+            });
+
+            promptType.addEventListener('change', function() {
+                interviewType.value = promptType.value;
+                loadPrompt(promptType.value);
+            });
+        }
+
+        function loadPrompt(promptKey) {
+            const promptEditor = document.getElementById("promptEditor");
+            const selectedPrompt = INTERVIEW_PROMPTS[promptKey];
+            promptEditor.value = selectedPrompt;
+            currentPrompt = selectedPrompt;  // Update the current prompt
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+
+            // Lazy load the prompts only the first time the "Prompt Management" tab is opened
+            if (tabName === 'PromptManagement' && !promptTabOpened) {
+                loadPrompts();
+                promptTabOpened = true;
+            }
+        }
+
+        function loadPrompts() {
+            const promptTypeSelect = document.getElementById("promptType");
+
+            // Populate interview type options dynamically
+            for (const key in INTERVIEW_PROMPTS) {
+                let option = document.createElement("option");
+                option.value = key;
+                option.textContent = key.replace(/_/g, ' ');
+                promptTypeSelect.appendChild(option);
+            }
+
+            syncDropdowns(); // Sync dropdowns after options are populated
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sync dropdowns on page load
+            syncDropdowns();
+
+            // Load the initial prompt (AI Specialist) when the page loads
+            loadPrompt('ai_specialist');
+        });
+
         function showLoading() {
             document.getElementById('loadingMessage').classList.remove('hidden');
             document.getElementById('submitButton').disabled = true;
@@ -77,6 +193,7 @@
             showLoading();
 
             const formData = new FormData(event.target);
+            formData.append('prompt', currentPrompt);  // Add the updated prompt to the form data
 
             fetch("{{ url_for('start_call') }}", {
                 method: 'POST',
@@ -99,76 +216,125 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
     <div class="container mx-auto max-w-md w-full">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-2 text-center text-gray-800">AI Conversation Bot</h1>
-        <h2 class="text-lg sm:text-xl mb-6 text-center text-gray-600">Phone-Based AI-Powered Assistant for Mock Interviews and Personal Guidance</h2>
-        <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
-            <p class="mb-6 text-gray-700 text-sm sm:text-base">Refine your skills with our AI-powered phone call system. Choose an interview type, select a voice, and enter your phone number to start an interactive AI conversation.</p>
-            <form action="{{ url_for('start_call') }}" method="POST" class="mb-6" onsubmit="handleSubmit(event)">
-                <div class="mb-6">
-                    <label for="interview_type" class="block text-gray-700 text-sm font-bold mb-2">Select Interview Type:</label>
-                    <select id="interview_type" name="interview_type" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <option value="default">AI Interview Bot (Default)</option>
-                        <option value="cloud_computing">Cloud Computing</option>
-                        <option value="sales">Sales</option>
-                        <option value="college_prep">College Preparation</option>
-                        <option value="counseling">Counseling</option>
-                        <option value="therapy">Therapy</option>
-                        <option value="psychoanalysis">Psychoanalysis</option>
-                        <option value="girlfriend">Girlfriend</option>
-                        <option value="boyfriend">Boyfriend</option>
-                        <option value="friend">Just a Friend</option>
-                        <option value="business_executive">Business Executive</option>
-                        <option value="entrepreneur_coach">Entrepreneur Coach</option>
-                        <option value="investor_pitch_advisor">Investor Pitch Advisor</option>
-                        <option value="hr_interviewer">HR Interviewer</option>
-                        <option value="technical_support">Technical Support Specialist</option>
-                        <option value="it_consultant">IT Consultant</option>
-                        <option value="software_engineer_peer">Software Engineer Peer</option>
-                        <option value="ai_specialist">AI Specialist</option>
-                        <option value="drive_through_order_taker">Drive-Through Order Taker</option>
-                        <option value="call_center_operator">Call Center Operator</option>
-                        <option value="personal_shopper">Personal Shopper</option>
-                        <option value="gamer_friend">Gamer Friend</option>
-                        <option value="game_master">Game Master</option>
-                        <option value="esports_coach">Esports Coach</option>
-                        <option value="survey_interviewer">Survey Interviewer</option>
-                        <option value="political_pollster">Political Pollster</option>
-                        <option value="fitness_coach">Fitness Coach</option>
-                        <option value="financial_advisor">Financial Advisor</option>
-                        <option value="mental_health_coach">Mental Health Coach</option>
-                        <option value="life_coach">Life Coach</option>
-                    </select>            
+
+        <!-- Page Title and Subtitle -->
+        <div class="text-center mb-4">
+            <h1 class="text-3xl font-bold text-gray-800">AI Conversation Bot</h1>
+            <h2 class="text-base text-gray-600 subheader">Phone-Based AI-Powered Assistant for<br>Mock Interviews and Personal Guidance</h2>
+        </div>
+
+        <!-- Tabs for the main UI and prompt management -->
+        <div class="tabs">
+            <ul class="flex justify-center mb-0">
+                <li>
+                    <button class="tablinks active" onclick="openTab(event, 'MainUI')">Main UI</button>
+                </li>
+                <li>
+                    <button class="tablinks" onclick="openTab(event, 'PromptManagement')">Prompt Management</button>
+                </li>
+            </ul>
+
+            <div class="tabcontainer">
+                <!-- Main UI Tab Content -->
+                <div id="MainUI" class="tabcontent active">
+                    <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
+                        <p class="mb-6 text-gray-700 text-sm sm:text-base">Refine your skills with our AI-powered phone call system. Choose an interview type, select a voice, and enter your phone number to start an interactive AI conversation.</p>
+                        <form action="{{ url_for('start_call') }}" method="POST" class="mb-6" onsubmit="handleSubmit(event)">
+                            <div class="mb-6">
+                                <label for="interview_type" class="block text-gray-700 text-sm font-bold mb-2">Select Interview Type:</label>
+                                <select id="interview_type" name="interview_type" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option value="default">AI Interview Bot (Default)</option>
+                                    <option value="cloud_computing">Cloud Computing</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="college_prep">College Preparation</option>
+                                    <option value="counseling">Counseling</option>
+                                    <option value="therapy">Therapy</option>
+                                    <option value="psychoanalysis">Psychoanalysis</option>
+                                    <option value="girlfriend">Girlfriend</option>
+                                    <option value="boyfriend">Boyfriend</option>
+                                    <option value="friend">Just a Friend</option>
+                                    <option value="business_executive">Business Executive</option>
+                                    <option value="entrepreneur_coach">Entrepreneur Coach</option>
+                                    <option value="investor_pitch_advisor">Investor Pitch Advisor</option>
+                                    <option value="hr_interviewer">HR Interviewer</option>
+                                    <option value="technical_support">Technical Support Specialist</option>
+                                    <option value="it_consultant">IT Consultant</option>
+                                    <option value="software_engineer_peer">Software Engineer Peer</option>
+                                    <option value="ai_specialist" selected>AI Specialist</option> <!-- Set as default -->
+                                    <option value="drive_through_order_taker">Drive-Through Order Taker</option>
+                                    <option value="call_center_operator">Call Center Operator</option>
+                                    <option value="personal_shopper">Personal Shopper</option>
+                                    <option value="gamer_friend">Gamer Friend</option>
+                                    <option value="game_master">Game Master</option>
+                                    <option value="esports_coach">Esports Coach</option>
+                                    <option value="survey_interviewer">Survey Interviewer</option>
+                                    <option value="political_pollster">Political Pollster</option>
+                                    <option value="fitness_coach">Fitness Coach</option>
+                                    <option value="financial_advisor">Financial Advisor</option>
+                                    <option value="mental_health_coach">Mental Health Coach</option>
+                                    <option value="life_coach">Life Coach</option>
+                                </select>            
+                            </div>
+                            <div class="mb-6">
+                                <label for="voice" class="block text-gray-700 text-sm font-bold mb-2">Select Voice:</label>
+                                <select id="voice" name="voice" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option value="nat">Nat</option>
+                                    <option value="mason">Mason</option>
+                                    <option value="ryan">Ryan</option>
+                                    <option value="adriana">Adriana</option>
+                                    <option value="tina">Tina</option>
+                                    <option value="evelyn">Evelyn</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone_number" class="block text-gray-700 text-sm font-bold mb-2">Enter your phone number:</label>
+                                <input type="tel" id="phone_number" name="phone_number" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button id="submitButton" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+                                    Start Call
+                                </button>
+                            </div>
+                        </form>
+                        <div id="loadingMessage" class="hidden mt-4 text-center text-gray-700">
+                            Please wait while we initiate your call...
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <label for="voice" class="block text-gray-700 text-sm font-bold mb-2">Select Voice:</label>
-                    <select id="voice" name="voice" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <option value="nat">Nat</option>
-                        <option value="mason">Mason</option>
-                        <option value="ryan">Ryan</option>
-                        <option value="adriana">Adriana</option>
-                        <option value="tina">Tina</option>
-                        <option value="matt">Matt</option>
-                        <option value="evelyn">Evelyn</option>
-                    </select>
+
+                <!-- Prompt Management Tab Content -->
+                <div id="PromptManagement" class="tabcontent">
+                    <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
+                        <p class="mb-6 text-gray-700 text-sm sm:text-base">Manage the AI interview prompts. Modify the default prompts for different interview types and customize the AI behavior.</p>
+                        <div class="mb-6">
+                            <label for="promptType" class="block text-gray-700 text-sm font-bold mb-2">Select Interview Type:</label>
+                            <select id="promptType" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <!-- Options dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="promptEditor" class="block text-gray-700 text-sm font-bold mb-2">Edit Prompt:</label>
+                            <textarea id="promptEditor" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="10" placeholder="Edit the prompt here..."></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button id="savePromptButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+                                Save Prompt
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <label for="phone_number" class="block text-gray-700 text-sm font-bold mb-2">Enter your phone number:</label>
-                    <input type="tel" id="phone_number" name="phone_number" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
-                </div>
-                <div class="flex items-center justify-between">
-                    <button id="submitButton" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
-                        Start Call
-                    </button>
-                </div>
-            </form>
-            <div id="loadingMessage" class="hidden mt-4 text-center text-gray-700">
-                Please wait while we initiate your call...
             </div>
         </div>
+
         <p class="text-center text-gray-500 text-xs">
             &copy; AI Conversation Bot. No rights reserved, Go Crazy 🤪<br>
             Created by <a href="https://github.com/ruvnet/voicebot" class="text-blue-500 hover:text-blue-700">ruv | Open Source Code</a>
         </p>
     </div>
+
+    <!-- Embed INTERVIEW_PROMPTS as a JavaScript variable -->
+    <script>
+        const INTERVIEW_PROMPTS = {{ interview_prompts | tojson }};
+    </script>
 </body>
 </html>
