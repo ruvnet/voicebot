@@ -84,7 +84,7 @@
 
         /* Tab container height to avoid UI adjustment */
         .tabcontainer {
-            min-height: 500px; /* Set a fixed minimum height */
+            min-height: 500px;
             background-color: #ffffff;
             padding: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -99,7 +99,7 @@
 
         /* Adjust spacing between subheader and tabs */
         .subheader {
-            margin-bottom: 16px; /* Reduced margin */
+            margin-bottom: 16px;
         }
     </style>
     <script>
@@ -223,14 +223,17 @@
             <h2 class="text-base text-gray-600 subheader">Phone-Based AI-Powered Assistant for<br>Mock Interviews and Personal Guidance</h2>
         </div>
 
-        <!-- Tabs for the main UI and prompt management -->
+        <!-- Tabs for the main UI, prompt management, and settings -->
         <div class="tabs">
             <ul class="flex justify-center mb-0">
                 <li>
-                    <button class="tablinks active" onclick="openTab(event, 'MainUI')">Main UI</button>
+                    <button class="tablinks active" onclick="openTab(event, 'MainUI')">Start</button>
                 </li>
                 <li>
-                    <button class="tablinks" onclick="openTab(event, 'PromptManagement')">Prompt Management</button>
+                    <button class="tablinks" onclick="openTab(event, 'PromptManagement')">Prompts</button>
+                </li>
+                <li>
+                    <button class="tablinks" onclick="openTab(event, 'Settings')">Settings</button>
                 </li>
             </ul>
 
@@ -243,7 +246,7 @@
                             <div class="mb-6">
                                 <label for="interview_type" class="block text-gray-700 text-sm font-bold mb-2">Select Interview Type:</label>
                                 <select id="interview_type" name="interview_type" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                                    <option value="default">AI Interview Bot (Default)</option>
+                                    <option value="default" selected>AI Interview Bot (Default)</option>
                                     <option value="cloud_computing">Cloud Computing</option>
                                     <option value="sales">Sales</option>
                                     <option value="college_prep">College Preparation</option>
@@ -260,7 +263,7 @@
                                     <option value="technical_support">Technical Support Specialist</option>
                                     <option value="it_consultant">IT Consultant</option>
                                     <option value="software_engineer_peer">Software Engineer Peer</option>
-                                    <option value="ai_specialist" selected>AI Specialist</option> <!-- Set as default -->
+                                    <option value="ai_specialist">AI Specialist</option>
                                     <option value="drive_through_order_taker">Drive-Through Order Taker</option>
                                     <option value="call_center_operator">Call Center Operator</option>
                                     <option value="personal_shopper">Personal Shopper</option>
@@ -323,8 +326,261 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
+                <!-- Settings Tab Content -->
+                <div id="Settings" class="tabcontent">
+                    <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-bold">Settings</h3>
+                            <button id="loadDefaults" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded">
+                                Load Defaults
+                            </button>
+                        </div>
+
+                        <!-- Webhook URL -->
+                        <div class="mb-6">
+                            <label for="webhook" class="block text-gray-700 text-sm font-bold mb-2">Webhook URL:</label>
+                            <input type="url" id="webhook" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="https://example.com/webhook">
+                        </div>
+
+                        <!-- Analysis Schema -->
+                        <div class="mb-6">
+                            <label for="analysis_schema" class="block text-gray-700 text-sm font-bold mb-2">Analysis Schema:</label>
+                            <textarea id="analysis_schema" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter JSON schema for analysis"></textarea>
+                        </div>
+
+                        <!-- Timeout -->
+                        <div class="mb-6">
+                            <label for="timeout" class="block text-gray-700 text-sm font-bold mb-2">Timeout (ms):</label>
+                            <input type="number" id="timeout" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="2000">
+                        </div>
+
+                        <!-- Cache -->
+                        <div class="mb-6">
+                            <label for="cache" class="block text-gray-700 text-sm font-bold mb-2">Cache:</label>
+                            <select id="cache" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- From (Caller ID) -->
+                        <div class="mb-6">
+                            <label for="from" class="block text-gray-700 text-sm font-bold mb-2">From (Caller ID):</label>
+                            <input type="text" id="from" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
+                        </div>
+
+                        <!-- Pathway ID -->
+                        <div class="mb-6">
+                            <label for="pathway_id" class="block text-gray-700 text-sm font-bold mb-2">Pathway ID:</label>
+                            <input type="text" id="pathway_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Pathway ID">
+                        </div>
+
+                        <!-- Voice Settings -->
+                        <div class="mb-6">
+                            <label for="voice_settings" class="block text-gray-700 text-sm font-bold mb-2">Voice Settings (JSON):</label>
+                            <textarea id="voice_settings" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder='{"speed": 1.0, "pitch": 1.0}'></textarea>
+                        </div>
+
+                        <!-- Local Dialing -->
+                        <div class="mb-6">
+                            <label for="local_dialing" class="block text-gray-700 text-sm font-bold mb-2">Local Dialing:</label>
+                            <select id="local_dialing" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- Max Duration -->
+                        <div class="mb-6">
+                            <label for="max_duration" class="block text-gray-700 text-sm font-bold mb-2">Max Duration (minutes):</label>
+                            <input type="number" id="max_duration" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="2">
+                        </div>
+
+                        <!-- Answered By Enabled -->
+                        <div class="mb-6">
+                            <label for="answered_by_enabled" class="block text-gray-700 text-sm font-bold mb-2">Answered By Detection:</label>
+                            <select id="answered_by_enabled" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- Wait For Greeting -->
+                        <div class="mb-6">
+                            <label for="wait_for_greeting" class="block text-gray-700 text-sm font-bold mb-2">Wait For Greeting:</label>
+                            <select id="wait_for_greeting" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- Record -->
+                        <div class="mb-6">
+                            <label for="record" class="block text-gray-700 text-sm font-bold mb-2">Record Call:</label>
+                            <select id="record" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- AMD (Answering Machine Detection) -->
+                        <div class="mb-6">
+                            <label for="amd" class="block text-gray-700 text-sm font-bold mb-2">Answering Machine Detection:</label>
+                            <select id="amd" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <!-- Interruption Threshold -->
+                        <div class="mb-6">
+                            <label for="interruption_threshold" class="block text-gray-700 text-sm font-bold mb-2">Interruption Threshold:</label>
+                            <input type="number" id="interruption_threshold" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="100">
+                        </div>
+
+                        <!-- Voicemail Message -->
+                        <div class="mb-6">
+                            <label for="voicemail_message" class="block text-gray-700 text-sm font-bold mb-2">Voicemail Message:</label>
+                            <textarea id="voicemail_message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter voicemail message"></textarea>
+                        </div>
+
+                        <!-- Temperature -->
+                        <div class="mb-6">
+                            <label for="temperature" class="block text-gray-700 text-sm font-bold mb-2">Temperature:</label>
+                            <input type="number" id="temperature" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., 0.7">
+                        </div>
+
+                        <!-- Transfer Phone Number -->
+                        <div class="mb-6">
+                            <label for="transfer_phone_number" class="block text-gray-700 text-sm font-bold mb-2">Transfer Phone Number:</label>
+                            <input type="text" id="transfer_phone_number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
+                        </div>
+
+                        <!-- Pronunciation Guide -->
+                        <div class="mb-6">
+                            <label for="pronunciation_guide" class="block text-gray-700 text-sm font-bold mb-2">Pronunciation Guide (JSON):</label>
+                            <textarea id="pronunciation_guide" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder='[{"word": "example", "pronunciation": "eg-zam-pul"}]'></textarea>
+                        </div>
+
+                        <!-- Start Time -->
+                        <div class="mb-6">
+                            <label for="start_time" class="block text-gray-700 text-sm font-bold mb-2">Start Time:</label>
+                            <input type="datetime-local" id="start_time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+
+                        <!-- Request Data -->
+                        <div class="mb-6">
+                            <label for="request_data" class="block text-gray-700 text-sm font-bold mb-2">Request Data (JSON):</label>
+                            <textarea id="request_data" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter additional request data"></textarea>
+                        </div>
+
+                        <!-- Tools -->
+                        <div class="mb-6">
+                            <label for="tools" class="block text-gray-700 text-sm font-bold mb-2">Tools (JSON):</label>
+                            <textarea id="tools" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter tools configuration"></textarea>
+                        </div>
+
+                        <!-- Dynamic Data -->
+                        <div class="mb-6">
+                            <label for="dynamic_data" class="block text-gray-700 text-sm font-bold mb-2">Dynamic Data (JSON):</label>
+                            <textarea id="dynamic_data" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter dynamic data"></textarea>
+                        </div>
+
+                        <!-- Analysis Preset -->
+                        <div class="mb-6">
+                            <label for="analysis_preset" class="block text-gray-700 text-sm font-bold mb-2">Analysis Preset:</label>
+                            <input type="text" id="analysis_preset" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter analysis preset">
+                        </div>
+
+                        <!-- Calendly -->
+                        <div class="mb-6">
+                            <label for="calendly" class="block text-gray-700 text-sm font-bold mb-2">Calendly (JSON):</label>
+                            <textarea id="calendly" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter Calendly configuration"></textarea>
+                        </div>
+
+                        <!-- Save Settings Button -->
+                        <div class="flex items-center justify-between">
+                            <button id="saveSettings" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+                                Save Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                document.getElementById('loadDefaults').addEventListener('click', function() {
+                    // Load default values for each field
+                    document.getElementById('webhook').value = "https://webhook.site/sample-webhook";
+                    document.getElementById('analysis_schema').value = `{
+                    "email_address": "email",
+                    "first_name": "string",
+                    "last_name": "string",
+                    "wants_to_book_appointment": "boolean",
+                    "appointment_time": "YYYY-MM-DD HH:MM:SS"
+                    }`;
+                    document.getElementById('timeout').value = "2000";
+                    document.getElementById('cache').value = "true";
+                    document.getElementById('from').value = "+1234567890";
+                    document.getElementById('pathway_id').value = "sample_pathway";
+                    document.getElementById('voice_settings').value = `{
+                    "speed": 1.0,
+                    "pitch": 1.0
+                    }`;
+                    document.getElementById('local_dialing').value = "false";
+                    document.getElementById('max_duration').value = "2";
+                    document.getElementById('answered_by_enabled').value = "true";
+                    document.getElementById('wait_for_greeting').value = "true";
+                    document.getElementById('record').value = "true";
+                    document.getElementById('amd').value = "false";
+                    document.getElementById('interruption_threshold').value = "100";
+                    document.getElementById('voicemail_message').value = "Please leave a message after the beep.";
+                    document.getElementById('temperature').value = "0.7";
+                    document.getElementById('transfer_phone_number').value = "+1234567890";
+                    document.getElementById('pronunciation_guide').value = `[{"word": "example", "pronunciation": "eg-zam-pul"}]`;
+                    document.getElementById('start_time').value = "";
+                    document.getElementById('request_data').value = "{}";
+                    document.getElementById('tools').value = "{}";
+                    document.getElementById('dynamic_data').value = "[]";
+                    document.getElementById('analysis_preset').value = "";
+                    document.getElementById('calendly').value = "{}";
+                });
+
+                // Save the settings and apply them in the request
+                document.getElementById('saveSettings').addEventListener('click', function() {
+                    const settings = {
+                        webhook: document.getElementById('webhook').value,
+                        analysis_schema: document.getElementById('analysis_schema').value,
+                        timeout: parseInt(document.getElementById('timeout').value, 10),
+                        cache: document.getElementById('cache').value === "true",
+                        from: document.getElementById('from').value,
+                        pathway_id: document.getElementById('pathway_id').value,
+                        voice_settings: JSON.parse(document.getElementById('voice_settings').value),
+                        local_dialing: document.getElementById('local_dialing').value === "true",
+                        max_duration: parseInt(document.getElementById('max_duration').value, 10),
+                        answered_by_enabled: document.getElementById('answered_by_enabled').value === "true",
+                        wait_for_greeting: document.getElementById('wait_for_greeting').value === "true",
+                        record: document.getElementById('record').value === "true",
+                        amd: document.getElementById('amd').value === "true",
+                        interruption_threshold: parseInt(document.getElementById('interruption_threshold').value, 10),
+                        voicemail_message: document.getElementById('voicemail_message').value,
+                        temperature: parseFloat(document.getElementById('temperature').value),
+                        transfer_phone_number: document.getElementById('transfer_phone_number').value,
+                        pronunciation_guide: JSON.parse(document.getElementById('pronunciation_guide').value),
+                        start_time: document.getElementById('start_time').value,
+                        request_data: JSON.parse(document.getElementById('request_data').value),
+                        tools: JSON.parse(document.getElementById('tools').value),
+                        dynamic_data: JSON.parse(document.getElementById('dynamic_data').value),
+                        analysis_preset: document.getElementById('analysis_preset').value,
+                        calendly: JSON.parse(document.getElementById('calendly').value)
+                    };
+
+                    console.log('Settings saved and applied:', settings);
+                    // You can now use the 'settings' object in your API requests
+                });
+                </script>
+
+
+
 
         <p class="text-center text-gray-500 text-xs">
             &copy; AI Conversation Bot. No rights reserved, Go Crazy 🤪<br>

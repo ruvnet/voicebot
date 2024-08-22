@@ -48,6 +48,7 @@ INTERVIEW_PROMPTS = {
 def home():
     return render_template('home.html', interview_prompts=INTERVIEW_PROMPTS)
 
+
 @app.route('/start-call', methods=['POST'])
 def start_call():
     phone_number = request.form.get('phone_number')
