@@ -327,7 +327,7 @@
                     </div>
                 </div>
 
-                <!-- Settings Tab Content -->
+               <!-- Settings Tab Content -->
                 <div id="Settings" class="tabcontent">
                     <div class="bg-white shadow-md rounded px-6 py-8 mb-4">
                         <div class="flex justify-between items-center mb-4">
@@ -340,24 +340,28 @@
                         <!-- Webhook URL -->
                         <div class="mb-6">
                             <label for="webhook" class="block text-gray-700 text-sm font-bold mb-2">Webhook URL:</label>
+                            <p class="text-xs text-gray-500 mb-2">Define the URL where the webhook will send data after processing the call.</p>
                             <input type="url" id="webhook" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="https://example.com/webhook">
                         </div>
 
                         <!-- Analysis Schema -->
                         <div class="mb-6">
                             <label for="analysis_schema" class="block text-gray-700 text-sm font-bold mb-2">Analysis Schema:</label>
+                            <p class="text-xs text-gray-500 mb-2">Set the JSON schema that determines how the AI should analyze and extract data during the conversation.</p>
                             <textarea id="analysis_schema" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter JSON schema for analysis"></textarea>
                         </div>
 
                         <!-- Timeout -->
                         <div class="mb-6">
                             <label for="timeout" class="block text-gray-700 text-sm font-bold mb-2">Timeout (ms):</label>
+                            <p class="text-xs text-gray-500 mb-2">Configure the timeout duration in milliseconds for the request.</p>
                             <input type="number" id="timeout" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="2000">
                         </div>
 
                         <!-- Cache -->
                         <div class="mb-6">
                             <label for="cache" class="block text-gray-700 text-sm font-bold mb-2">Cache:</label>
+                            <p class="text-xs text-gray-500 mb-2">Choose whether to enable caching for requests.</p>
                             <select id="cache" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -367,24 +371,28 @@
                         <!-- From (Caller ID) -->
                         <div class="mb-6">
                             <label for="from" class="block text-gray-700 text-sm font-bold mb-2">From (Caller ID):</label>
+                            <p class="text-xs text-gray-500 mb-2">Set the caller ID for the outgoing call.</p>
                             <input type="text" id="from" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
                         </div>
 
                         <!-- Pathway ID -->
                         <div class="mb-6">
                             <label for="pathway_id" class="block text-gray-700 text-sm font-bold mb-2">Pathway ID:</label>
+                            <p class="text-xs text-gray-500 mb-2">Define a unique identifier for the call pathway, which may link to specific conversation flows.</p>
                             <input type="text" id="pathway_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Pathway ID">
                         </div>
 
                         <!-- Voice Settings -->
                         <div class="mb-6">
                             <label for="voice_settings" class="block text-gray-700 text-sm font-bold mb-2">Voice Settings (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Customize the voice settings such as speed and pitch using a JSON object.</p>
                             <textarea id="voice_settings" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder='{"speed": 1.0, "pitch": 1.0}'></textarea>
                         </div>
 
                         <!-- Local Dialing -->
                         <div class="mb-6">
                             <label for="local_dialing" class="block text-gray-700 text-sm font-bold mb-2">Local Dialing:</label>
+                            <p class="text-xs text-gray-500 mb-2">Toggle whether to use local dialing rules for the call.</p>
                             <select id="local_dialing" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -394,12 +402,14 @@
                         <!-- Max Duration -->
                         <div class="mb-6">
                             <label for="max_duration" class="block text-gray-700 text-sm font-bold mb-2">Max Duration (minutes):</label>
+                            <p class="text-xs text-gray-500 mb-2">Set the maximum allowed duration for the call in minutes.</p>
                             <input type="number" id="max_duration" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="2">
                         </div>
 
                         <!-- Answered By Enabled -->
                         <div class="mb-6">
                             <label for="answered_by_enabled" class="block text-gray-700 text-sm font-bold mb-2">Answered By Detection:</label>
+                            <p class="text-xs text-gray-500 mb-2">Enable or disable the detection of whether the call was answered by a human or a machine.</p>
                             <select id="answered_by_enabled" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -409,6 +419,7 @@
                         <!-- Wait For Greeting -->
                         <div class="mb-6">
                             <label for="wait_for_greeting" class="block text-gray-700 text-sm font-bold mb-2">Wait For Greeting:</label>
+                            <p class="text-xs text-gray-500 mb-2">Choose whether the AI should wait for the recipient's greeting before starting the conversation.</p>
                             <select id="wait_for_greeting" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -418,6 +429,7 @@
                         <!-- Record -->
                         <div class="mb-6">
                             <label for="record" class="block text-gray-700 text-sm font-bold mb-2">Record Call:</label>
+                            <p class="text-xs text-gray-500 mb-2">Enable or disable the recording of the call.</p>
                             <select id="record" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -427,6 +439,7 @@
                         <!-- AMD (Answering Machine Detection) -->
                         <div class="mb-6">
                             <label for="amd" class="block text-gray-700 text-sm font-bold mb-2">Answering Machine Detection:</label>
+                            <p class="text-xs text-gray-500 mb-2">Enable or disable automatic machine detection to check if the call was answered by a machine.</p>
                             <select id="amd" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="true">True</option>
                                 <option value="false">False</option>
@@ -436,66 +449,80 @@
                         <!-- Interruption Threshold -->
                         <div class="mb-6">
                             <label for="interruption_threshold" class="block text-gray-700 text-sm font-bold mb-2">Interruption Threshold:</label>
+                            <p class="text-xs text-gray-500 mb-2">Set the interruption threshold, determining how the AI handles interruptions during the call.</p>
                             <input type="number" id="interruption_threshold" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="100">
                         </div>
 
                         <!-- Voicemail Message -->
                         <div class="mb-6">
+                            <label for="voicemail_message" class="block text-gray-700 text-sm font-bold```html
+                        <!-- Voicemail Message -->
+                        <div class="mb-6">
                             <label for="voicemail_message" class="block text-gray-700 text-sm font-bold mb-2">Voicemail Message:</label>
+                            <p class="text-xs text-gray-500 mb-2">Set a custom voicemail message to be played if the call goes to voicemail.</p>
                             <textarea id="voicemail_message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter voicemail message"></textarea>
                         </div>
 
                         <!-- Temperature -->
                         <div class="mb-6">
                             <label for="temperature" class="block text-gray-700 text-sm font-bold mb-2">Temperature:</label>
+                            <p class="text-xs text-gray-500 mb-2">Adjust the creativity or randomness level of the AI's responses during the call. Lower values result in more deterministic responses.</p>
                             <input type="number" id="temperature" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., 0.7">
                         </div>
 
                         <!-- Transfer Phone Number -->
                         <div class="mb-6">
                             <label for="transfer_phone_number" class="block text-gray-700 text-sm font-bold mb-2">Transfer Phone Number:</label>
+                            <p class="text-xs text-gray-500 mb-2">Define the phone number where the call should be transferred, if applicable.</p>
                             <input type="text" id="transfer_phone_number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., +1234567890">
                         </div>
 
                         <!-- Pronunciation Guide -->
                         <div class="mb-6">
                             <label for="pronunciation_guide" class="block text-gray-700 text-sm font-bold mb-2">Pronunciation Guide (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Set custom pronunciations for specific words or names using a JSON format.</p>
                             <textarea id="pronunciation_guide" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder='[{"word": "example", "pronunciation": "eg-zam-pul"}]'></textarea>
                         </div>
 
                         <!-- Start Time -->
                         <div class="mb-6">
                             <label for="start_time" class="block text-gray-700 text-sm font-bold mb-2">Start Time:</label>
+                            <p class="text-xs text-gray-500 mb-2">Schedule the start time for the call.</p>
                             <input type="datetime-local" id="start_time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
 
                         <!-- Request Data -->
                         <div class="mb-6">
                             <label for="request_data" class="block text-gray-700 text-sm font-bold mb-2">Request Data (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Provide additional data in JSON format that may be required for the call.</p>
                             <textarea id="request_data" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter additional request data"></textarea>
                         </div>
 
                         <!-- Tools -->
                         <div class="mb-6">
                             <label for="tools" class="block text-gray-700 text-sm font-bold mb-2">Tools (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Configure external tools or services to be used during the call, specified in JSON format.</p>
                             <textarea id="tools" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter tools configuration"></textarea>
                         </div>
 
                         <!-- Dynamic Data -->
                         <div class="mb-6">
                             <label for="dynamic_data" class="block text-gray-700 text-sm font-bold mb-2">Dynamic Data (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Provide dynamic data in JSON format that may be fetched or updated during the call.</p>
                             <textarea id="dynamic_data" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter dynamic data"></textarea>
                         </div>
 
                         <!-- Analysis Preset -->
                         <div class="mb-6">
                             <label for="analysis_preset" class="block text-gray-700 text-sm font-bold mb-2">Analysis Preset:</label>
+                            <p class="text-xs text-gray-500 mb-2">Choose a predefined analysis configuration to apply to the call data.</p>
                             <input type="text" id="analysis_preset" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter analysis preset">
                         </div>
 
                         <!-- Calendly -->
                         <div class="mb-6">
                             <label for="calendly" class="block text-gray-700 text-sm font-bold mb-2">Calendly (JSON):</label>
+                            <p class="text-xs text-gray-500 mb-2">Integrate with Calendly for scheduling appointments, using JSON configuration.</p>
                             <textarea id="calendly" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Enter Calendly configuration"></textarea>
                         </div>
 
@@ -507,6 +534,7 @@
                         </div>
                     </div>
                 </div>
+
                 <script>
                 document.getElementById('loadDefaults').addEventListener('click', function() {
                     // Load default values for each field
