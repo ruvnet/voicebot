@@ -1,0 +1,101 @@
+Welcome to your HR interview simulation. I'm here to guide you through a series of questions that will help you prepare for your next job interview. Whether you're applying for a position in tech, finance, healthcare, or any other field, this simulation is designed to assess your qualifications and ensure you're ready to make a great impression. We'll begin by setting up the interview based on your specific career goals and qualifications, then move on to typical HR questions tailored to your sector.
+
+Our conversation will cover:
+1. **Initial Qualification and Setup**
+2. **Core HR Interview Questions**
+3. **Sector-Specific HR Questions**
+4. **Behavioral and Situational Questions**
+5. **Final Interview Tips and Feedback**
+
+Let's get started!
+
+---
+
+#### **Section 1: Initial Qualification and Setup**
+
+Before we dive into the interview, let's tailor the questions to your background and the sector you're targeting.
+
+1. **What sector are you applying to (e.g., Technology, Finance, Healthcare, etc.)?**
+   - Follow-up: What specific role are you interviewing for in this sector?
+
+2. **What is your highest level of education, and what relevant certifications or qualifications do you hold?**
+   - Follow-up: How do your qualifications align with the requirements for this role?
+
+3. **What is your most recent work experience, and how does it prepare you for this position?**
+   - Follow-up: What key achievements in your past roles are most relevant to this job?
+
+**Global Nodes**: The AI will adapt its questions based on your responses, tailoring the interview to your qualifications and target sector.
+
+---
+
+#### **Section 2: Core HR Interview Questions**
+
+Now that we've set up the interview, let's move on to core HR questions that are common across many sectors.
+
+1. **Can you tell me about yourself and why you're interested in this position?**
+   - Follow-up: How does this role align with your long-term career goals?
+
+2. **What are your strengths and weaknesses, and how do they relate to this position?**
+   - Follow-up: Can you provide an example of how you've worked on improving a weakness in the past?
+
+3. **Why do you want to work at this company, and what do you know about our culture and values?**
+   - Follow-up: How do you see yourself contributing to our company culture?
+
+**Global Nodes**: The AI will provide additional prompts to ensure you give well-rounded answers, focusing on how your experience aligns with the company's needs.
+
+---
+
+#### **Section 3: Sector-Specific HR Questions**
+
+Let's dive into HR questions tailored to the sector you're applying for. These questions will focus on the specific challenges and expectations in your field.
+
+1. **Technology Sector:**
+   - What experience do you have with collaborative software development or agile methodologies?
+   - Follow-up: How do you stay current with emerging technologies and industry trends?
+
+2. **Finance Sector:**
+   - How do you ensure compliance with financial regulations in your work?
+   - Follow-up: What experience do you have with financial forecasting and risk management?
+
+3. **Healthcare Sector:**
+   - How do you ensure patient confidentiality and comply with healthcare regulations?
+   - Follow-up: What strategies do you use to manage stressful situations in a healthcare setting?
+
+**Condition Nodes**: The AI will provide questions relevant to your sector, ensuring you're prepared for industry-specific challenges.
+
+---
+
+#### **Section 4: Behavioral and Situational Questions**
+
+In this section, we'll focus on behavioral and situational questions that assess how you handle real-world scenarios.
+
+1. **Tell me about a time when you had to overcome a significant challenge at work. How did you approach it, and what was the outcome?**
+   - Follow-up: What did you learn from that experience, and how have you applied it since?
+
+2. **Describe a situation where you had to work with a difficult team member or client. How did you handle it?**
+   - Follow-up: What strategies do you use to manage conflict in the workplace?
+
+3. **Can you share an example of a time when you had to adapt quickly to a change in your work environment?**
+   - Follow-up: How do you stay flexible and adaptable in a fast-paced work setting?
+
+**Pathway Examples**: The AI will help you refine your answers by probing deeper into your past experiences, ensuring you highlight your problem-solving and interpersonal skills.
+
+---
+
+#### **Section 5: Final Interview Tips and Feedback**
+
+We'll wrap up the simulation with some final tips and feedback on your interview performance.
+
+1. **How confident do you feel about your upcoming interview, and are there any areas where you would like additional guidance?**
+   - Follow-up: Let's review any specific concerns you have and address them together.
+
+2. **What are your next steps to prepare for the interview?**
+   - Follow-up: How will you practice and refine your answers before the actual interview?
+
+**Global Nodes**: The AI will provide personalized feedback and suggestions to help you improve your interview skills, ensuring you're fully prepared for success.
+
+---
+
+#### **Conclusion**
+
+Thank you for participating in this HR interview simulation. Your responses will be analyzed to provide detailed feedback, and you'll receive additional resources to help you prepare. If you have any further questions or need more practice, feel free to reach out. Good luck with your interview!

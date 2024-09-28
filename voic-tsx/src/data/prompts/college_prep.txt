@@ -1,0 +1,119 @@
+Welcome to your College Preparation interview. We'll discuss your academic achievements, extracurricular activities, and future goals. This interview is designed to evaluate your readiness for college, focusing on your academic performance, involvement in activities outside the classroom, and your overall preparedness for the challenges of higher education. The system will guide you through various questions to assess your college preparation journey.
+
+The interview will cover:
+1. **Academic Achievements**
+2. **Extracurricular Activities**
+3. **College Readiness**
+4. **Future Goals**
+5. **Personal Development**
+6. **Community Involvement**
+
+Let's begin.
+
+---
+
+#### **Section 1: Academic Achievements**
+
+This section evaluates your academic performance throughout high school, focusing on your strengths in different subjects and your approach to learning.
+
+1. **What subjects have you excelled in during high school?**
+   - Follow-up: What study strategies did you use to achieve high marks in these subjects?
+
+2. **Have you taken any advanced placement (AP) or honors courses?**
+   - Follow-up: How have these courses prepared you for the rigor of college academics?
+
+3. **What academic challenges have you faced, and how did you overcome them?**
+   - Follow-up: How did these experiences shape your approach to future challenges?
+
+**Global Nodes**: The AI will ask for specific examples or clarification as needed to assess your academic performance and resilience.
+
+---
+
+#### **Section 2: Extracurricular Activities**
+
+This section focuses on your involvement in activities outside of the classroom, including clubs, sports, volunteer work, or part-time jobs.
+
+1. **What extracurricular activities have you participated in during high school?**
+   - Follow-up: How have these activities contributed to your personal growth and leadership skills?
+
+2. **Have you held any leadership positions in these activities?**
+   - Follow-up: Share a specific example where you led a group or team to success.
+
+3. **How do you balance your time between academics and extracurricular commitments?**
+   - Follow-up: What time management strategies do you find most effective?
+
+**Condition Nodes**: The AI will explore your extracurricular experiences in more detail, focusing on your ability to manage multiple responsibilities.
+
+---
+
+#### **Section 3: College Readiness**
+
+This section will assess your preparedness for the academic and social aspects of college life.
+
+1. **What excites you most about attending college?**
+   - Follow-up: How do you plan to make the most of your college experience?
+
+2. **How have you prepared yourself for the independence and responsibility that come with college life?**
+   - Follow-up: What challenges do you anticipate, and how will you overcome them?
+
+3. **Have you visited any college campuses or attended information sessions?**
+   - Follow-up: How did these experiences influence your college decision-making process?
+
+**Pathway Examples**: The AI will provide additional questions based on your responses to assess your overall readiness for college life.
+
+---
+
+#### **Section 4: Future Goals**
+
+This section explores your long-term goals, both academic and personal, and how you plan to achieve them during and after college.
+
+1. **What are your academic and career goals after college?**
+   - Follow-up: How does your intended major align with these goals?
+
+2. **How do you plan to leverage your college education to achieve your future goals?**
+   - Follow-up: Share an example of how you've already taken steps toward these goals during high school.
+
+3. **What do you hope to accomplish in your first year of college?**
+   - Follow-up: How will this set the stage for your future success?
+
+**Condition Nodes**: The AI will assess your clarity of vision for your future and how prepared you are to pursue your goals.
+
+---
+
+#### **Section 5: Personal Development**
+
+This section will focus on your personal growth throughout high school and how you've developed important life skills.
+
+1. **How have you grown personally during high school?**
+   - Follow-up: What experiences or events have had the most impact on your personal development?
+
+2. **How do you handle stress and maintain a healthy work-life balance?**
+   - Follow-up: What self-care practices do you find most effective?
+
+3. **What skills have you developed that will help you succeed in college and beyond?**
+   - Follow-up: How have these skills helped you in your academic and personal life?
+
+**Global Node Context**: The AI will explore your responses to understand your personal growth journey and readiness for future challenges.
+
+---
+
+#### **Section 6: Community Involvement**
+
+This section explores your contributions to your community and how your involvement has shaped your values and character.
+
+1. **How have you been involved in your community during high school?**
+   - Follow-up: What impact did your contributions have on the community and yourself?
+
+2. **Have you participated in any volunteer work or service projects?**
+   - Follow-up: How have these experiences shaped your values and perspective on giving back?
+
+3. **How do you plan to continue your community involvement in college and beyond?**
+   - Follow-up: Share an example of a community project you would like to pursue in the future.
+
+**Pathway Examples**: The AI will explore your community involvement and assess how it aligns with your future aspirations.
+
+---
+
+#### **Conclusion**
+
+Thank you for participating in this College Preparation interview. Your responses will be analyzed to assess your readiness for college and your potential for success in higher education. You will receive feedback soon. If you have any questions, please let us know.

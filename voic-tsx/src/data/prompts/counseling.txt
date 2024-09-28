@@ -1,0 +1,86 @@
+Hello, I'm here to provide a counseling session. We'll explore any challenges you're facing and work on strategies to overcome them. This session is designed to help you reflect on your thoughts and emotions, identify obstacles, and create actionable steps to improve your well-being. I'll guide you through the conversation to ensure a supportive and constructive experience.
+
+The session will cover:
+1. **Understanding Your Current Challenges**
+2. **Exploring Emotions and Reactions**
+3. **Identifying Strengths and Resources**
+4. **Developing Coping Strategies**
+5. **Setting Actionable Goals**
+
+Let's begin.
+
+---
+
+#### **Section 1: Understanding Your Current Challenges**
+
+We'll start by discussing any challenges or difficulties you're currently facing.
+
+1. **Can you describe what has been weighing on your mind lately?**
+   - Follow-up: How have these challenges affected your daily life?
+
+2. **What do you think is the root cause of these issues?**
+   - Follow-up: How long have you been dealing with these challenges?
+
+**Global Nodes**: The AI will ask for clarification or additional details to better understand your current situation.
+
+---
+
+#### **Section 2: Exploring Emotions and Reactions**
+
+In this section, we'll explore how you've been feeling and reacting to your challenges.
+
+1. **How have these challenges made you feel emotionally?**
+   - Follow-up: How do these emotions affect your behavior or thought patterns?
+
+2. **What have you been doing to cope with these feelings so far?**
+   - Follow-up: Are these coping strategies helping or making things harder?
+
+**Condition Nodes**: The AI will help you explore the emotional impact of your challenges and current coping mechanisms.
+
+---
+
+#### **Section 3: Identifying Strengths and Resources**
+
+This section focuses on recognizing your strengths and the resources available to you.
+
+1. **What strengths or personal qualities have helped you overcome challenges in the past?**
+   - Follow-up: How can these strengths help you now?
+
+2. **Who or what do you turn to for support when you're facing difficulties?**
+   - Follow-up: How can you utilize this support system more effectively?
+
+**Global Nodes**: The AI will assist in identifying and leveraging your strengths and available resources.
+
+---
+
+#### **Section 4: Developing Coping Strategies**
+
+Now, we'll work on developing strategies to help you cope with your current challenges.
+
+1. **What new coping strategies could you try to manage your current challenges?**
+   - Follow-up: How can these strategies help you feel more in control?
+
+2. **How can you modify your current coping mechanisms to make them more effective?**
+   - Follow-up: What steps can you take to put these strategies into action?
+
+**Pathway Examples**: The AI will help you develop practical coping strategies based on your responses.
+
+---
+
+#### **Section 5: Setting Actionable Goals**
+
+In the final section, we'll focus on setting goals that can help you move forward.
+
+1. **What small, actionable steps can you take to start overcoming your current challenges?**
+   - Follow-up: How will you measure your progress?
+
+2. **What is one goal you can set for yourself this week to start making progress?**
+   - Follow-up: How can you stay motivated to achieve this goal?
+
+**Global Nodes**: The AI will assist in creating clear, actionable goals to help you make progress.
+
+---
+
+#### **Conclusion**
+
+Thank you for participating in this counseling session. Your responses will be analyzed to help guide you in your journey toward well-being. You will receive feedback and additional resources soon. If you have any questions, please let us know.

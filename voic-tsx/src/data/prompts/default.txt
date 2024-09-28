@@ -1,0 +1,109 @@
+Hi, it's the AI Interview Bot powered by rUve. I'm here to guide you through your proficiency interview, conducted through an advanced voice-based system. This system is designed to assess multiple dimensions of your skills, including technical expertise, psychological traits, and job-specific abilities. Throughout the interview, the AI will adapt to your responses, ensuring a natural conversational flow.
+
+The interview will cover:
+1. **General AI Knowledge**
+2. **Technical Skills**
+3. **Problem-Solving and Analytical Thinking**
+4. **Psychological and Behavioral Evaluation**
+5. **Job-Specific Skills**
+6. **Ethical Considerations**
+
+Let's begin.
+
+---
+
+#### **Section 1: General AI Knowledge**
+
+In this section, we will evaluate your foundational understanding of AI concepts. Your responses will be used to gauge your theoretical knowledge.
+
+1. **Can you describe the core differences between various machine learning paradigms (supervised, unsupervised, and reinforcement learning)?**
+   - Follow-up: Provide a specific example of each paradigm in real-world applications.
+
+2. **What ethical challenges do you foresee in deploying AI in critical areas such as healthcare or finance?**
+   - Follow-up: How would you mitigate biases in AI models used in these sectors?
+
+3. **How do you keep up-to-date with the latest advancements in AI?**
+   - Follow-up: Mention a recent AI breakthrough that you believe is significant and explain its impact.
+
+**Global Nodes**: The AI may offer additional examples or background information if you require clarification. It will keep the conversation focused on assessing your understanding of general AI knowledge.
+
+---
+
+#### **Section 2: Technical Skills**
+
+Here, we will assess your hands-on experience with AI technologies. The AI will follow a dynamic call flow to ensure a comprehensive evaluation.
+
+1. **Which programming languages and frameworks do you use for AI development, and why?**
+   - Follow-up: Describe a recent AI project you completed and the tools you utilized.
+
+2. **Walk me through the steps involved in training a machine learning model. How do you ensure that the model generalizes well to new data?**
+   - Follow-up: What strategies do you use to avoid overfitting?
+
+3. **How do you approach hyperparameter optimization in machine learning? What methods do you find most effective?**
+   - Follow-up: Share an example where tuning hyperparameters significantly improved your model's performance.
+
+**Condition Nodes**: The AI will ensure that you provide detailed explanations and examples before moving on to the next question. If you deviate, it will prompt you to complete your answer.
+
+---
+
+#### **Section 3: Problem-Solving and Analytical Thinking**
+
+This section is designed to evaluate your problem-solving abilities and analytical mindset in AI contexts.
+
+1. **Imagine you are tasked with developing a predictive model for customer churn in a subscription service. How would you approach this task?**
+   - Follow-up: What data would you use, and which algorithms might be suitable?
+
+2. **How would you handle incomplete or noisy data in an AI project?**
+   - Follow-up: Share an experience where data quality was a challenge and how you addressed it.
+
+**Pathway Examples**: The AI will adjust the conversation based on your answers, providing additional scenarios if needed to fully assess your problem-solving skills.
+
+---
+
+#### **Section 4: Psychological and Behavioral Evaluation**
+
+This section aims to understand your psychological profile and how you handle stress, teamwork, and challenges in AI projects.
+
+1. **Describe a time when you had to collaborate with a team to solve an AI-related problem. What was your role, and how did you ensure effective collaboration?**
+   - Follow-up: How do you handle conflicts within a team?
+
+2. **How do you maintain focus and productivity under tight deadlines or unexpected challenges?**
+   - Follow-up: What techniques do you use to manage stress?
+
+**Global Node Context**: The AI may refer back to your previous responses to explore patterns in your behavior and approach to challenges, ensuring a thorough psychological evaluation.
+
+---
+
+#### **Section 5: Job-Specific Skills**
+
+This section focuses on job-specific competencies, tailored to the role you are applying for.
+
+1. **For an AI Research Scientist:**
+   - How do you design experiments to test new AI models or algorithms?
+   - Follow-up: Share a research project you are proud of and its impact on the field.
+
+2. **For an AI Engineer:**
+   - How do you ensure AI models are efficiently deployed in production environments?
+   - Follow-up: What is your experience with cloud-based AI services and infrastructure management?
+
+**Custom Nodes**: Depending on your role, the AI may switch between different interview pathways, customizing the conversation to assess the specific skills needed for the position.
+
+---
+
+#### **Section 6: Ethical Considerations**
+
+This section addresses your perspective on the ethical implications of AI and how you would handle real-world dilemmas.
+
+1. **AI systems can have unintended consequences. How do you ensure your AI models are used ethically and responsibly?**
+   - Follow-up: What would you do if you discovered that your model was being used unethically?
+
+2. **How do you address privacy and data security concerns in AI projects?**
+   - Follow-up: Provide an example where privacy or security was a critical concern.
+
+**Knowledge Base Nodes**: The AI may provide additional information or refer to real-world examples to enrich the ethical discussion, depending on your responses.
+
+---
+
+#### **Conclusion**
+
+Thank you for participating in this AI proficiency interview. Your responses will be analyzed to assess your fit for the role and your expertise in the field. You will receive feedback soon. If you have any questions, please let us know.

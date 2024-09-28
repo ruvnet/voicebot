@@ -1,0 +1,116 @@
+Hello and welcome to your Sales interview. We'll be exploring your sales techniques, customer engagement strategies, and closing abilities. This interview is designed to evaluate your ability to build relationships, understand customer needs, and effectively close deals. The AI system will guide you through various scenarios to assess your skills in different aspects of sales.
+
+The interview will cover:
+1. **Sales Strategy**
+2. **Customer Engagement**
+3. **Handling Objections**
+4. **Closing Techniques**
+5. **Post-Sale Relationship Management**
+6. **Ethics in Sales**
+
+Let's begin.
+
+---
+
+#### **Section 1: Sales Strategy**
+
+In this section, we will evaluate your approach to developing and executing sales strategies. Your responses will help us understand how you plan and achieve sales goals.
+
+1. **What is your approach to developing a sales strategy for a new product or service?**
+   - Follow-up: How do you identify target markets and set sales goals?
+
+2. **How do you prioritize leads and opportunities in your sales pipeline?**
+   - Follow-up: Can you share a specific example where prioritizing led to a successful sale?
+
+3. **How do you leverage data and analytics to improve your sales performance?**
+   - Follow-up: What tools do you use to track and optimize your sales efforts?
+
+**Global Nodes**: The AI will ask for clarifications or additional examples if necessary, focusing on your ability to strategize and execute effectively.
+
+---
+
+#### **Section 2: Customer Engagement**
+
+This section focuses on your skills in engaging with customers and building strong relationships.
+
+1. **How do you approach building rapport with new prospects?**
+   - Follow-up: What techniques do you use to establish trust early in the sales process?
+
+2. **How do you tailor your sales pitch to meet the specific needs of different customers?**
+   - Follow-up: Share an example where customizing your approach led to a successful outcome.
+
+3. **How do you handle customers who are hesitant or unsure about making a purchase?**
+   - Follow-up: What specific strategies do you use to address their concerns?
+
+**Condition Nodes**: The AI will ensure that you provide specific examples and detailed explanations of your customer engagement techniques.
+
+---
+
+#### **Section 3: Handling Objections**
+
+This section will assess your ability to handle common sales objections and turn them into opportunities.
+
+1. **How do you handle price objections from customers?**
+   - Follow-up: Share a time when you successfully overcame a price objection.
+
+2. **What do you do when a customer expresses doubt about the product's value?**
+   - Follow-up: How do you demonstrate value to skeptical customers?
+
+3. **How do you manage objections related to competition?**
+   - Follow-up: Share an example where you successfully positioned your product against a competitor.
+
+**Pathway Examples**: The AI will adjust based on your responses, ensuring a thorough assessment of your objection-handling skills.
+
+---
+
+#### **Section 4: Closing Techniques**
+
+This section focuses on your ability to close deals effectively and confidently.
+
+1. **What are your go-to closing techniques when a customer is ready to buy?**
+   - Follow-up: Can you share a specific example of how you closed a challenging deal?
+
+2. **How do you create a sense of urgency to encourage customers to close the deal sooner?**
+   - Follow-up: What techniques do you use to prevent deals from stalling?
+
+3. **How do you ensure that your customers feel confident in their purchase decision at the moment of closing?**
+   - Follow-up: Share an example where you turned a hesitant customer into a confident buyer.
+
+**Global Node Context**: The AI will explore your closing techniques and ask for more examples if needed to assess your proficiency in this critical area.
+
+---
+
+#### **Section 5: Post-Sale Relationship Management**
+
+This section will explore how you manage relationships with customers after the sale to encourage repeat business and referrals.
+
+1. **How do you maintain relationships with customers after the sale?**
+   - Follow-up: What strategies do you use to turn one-time customers into repeat buyers?
+
+2. **How do you handle customer complaints or issues after the sale?**
+   - Follow-up: Share an example where you resolved a post-sale issue and retained the customer.
+
+3. **What methods do you use to encourage satisfied customers to provide referrals or testimonials?**
+   - Follow-up: Can you share a successful referral program you implemented?
+
+**Condition Nodes**: The AI will assess your ability to manage post-sale relationships and encourage customer loyalty.
+
+---
+
+#### **Section 6: Ethics in Sales**
+
+This section addresses your approach to ethical considerations in sales and maintaining integrity in customer interactions.
+
+1. **How do you ensure that your sales tactics remain ethical and customer-focused?**
+   - Follow-up: Share an example where you faced an ethical dilemma in sales and how you handled it.
+
+2. **How do you balance meeting sales targets with ensuring the best outcome for the customer?**
+   - Follow-up: Describe a situation where you prioritized customer needs over closing a sale.
+
+**Knowledge Base Nodes**: The AI may provide additional context or examples to enrich the discussion on sales ethics and best practices.
+
+---
+
+#### **Conclusion**
+
+Thank you for participating in this Sales interview. Your responses will be analyzed to assess your proficiency in the field, and you will receive feedback soon. If you have any questions, please let us know.

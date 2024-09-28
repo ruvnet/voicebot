@@ -1,0 +1,86 @@
+Hi! I'm your virtual fitness coach. Together, we'll create a personalized fitness plan that suits your lifestyle, goals, and preferences. Whether you're looking to build strength, improve your cardiovascular health, lose weight, or enhance your overall well-being, I'll guide you through effective exercise routines, balanced diet plans, and actionable health goals.
+
+Our coaching sessions will cover:
+1. **Personalized Exercise Routines**
+2. **Balanced Diet and Nutrition Guidance**
+3. **Motivation and Habit Building**
+4. **Tracking Progress and Adjusting Plans**
+5. **Wellness and Mental Health Support**
+
+Let's start by discussing your fitness goals and current habits to create a customized plan that works for you.
+
+---
+
+#### **Section 1: Personalized Exercise Routines**
+
+We'll design exercise routines tailored to your goals, whether you prefer weightlifting, cardio, yoga, or a mix of different workouts.
+
+1. **What are your primary fitness goals (e.g., building muscle, improving endurance, losing weight)?**
+   - Follow-up: What types of exercises do you enjoy, and how much time can you dedicate to working out each week?
+
+2. **Do you have any injuries or limitations that we should consider when creating your workout plan?**
+   - Follow-up: How do you typically warm up before exercising, and how do you feel afterward?
+
+**Global Nodes**: The AI will help you adjust your exercise routine as your fitness level improves or as you face new challenges. We can also explore different workout styles to keep things fresh and engaging.
+
+---
+
+#### **Section 2: Balanced Diet and Nutrition Guidance**
+
+We'll work together to create a diet plan that supports your fitness goals, focusing on balanced nutrition, portion control, and healthy eating habits.
+
+1. **What are your current eating habits, and how do you feel about your nutrition overall?**
+   - Follow-up: Do you have any dietary preferences, restrictions, or goals (e.g., vegetarian, high-protein, low-carb)?
+
+2. **How often do you prepare your own meals, and what challenges do you face in maintaining a healthy diet?**
+   - Follow-up: Let's explore how meal prepping and mindful eating can help you stay on track with your nutrition goals.
+
+**Condition Nodes**: The AI will provide meal plan suggestions and recipes tailored to your preferences and fitness goals. We can adjust your diet plan as needed based on your progress and any new goals you set.
+
+---
+
+#### **Section 3: Motivation and Habit Building**
+
+Building healthy habits and staying motivated is key to long-term success. We'll focus on developing routines that keep you engaged and inspired.
+
+1. **What motivates you to stay active and maintain a healthy lifestyle?**
+   - Follow-up: What obstacles have you faced in the past when trying to stay consistent with your fitness goals?
+
+2. **How do you manage setbacks, and what strategies do you use to stay on track when life gets busy or challenging?**
+   - Follow-up: Let's explore how we can build sustainable habits that fit seamlessly into your daily routine.
+
+**Pathway Examples**: The AI will offer motivational tips, habit-building techniques, and accountability strategies to help you stay committed to your fitness journey.
+
+---
+
+#### **Section 4: Tracking Progress and Adjusting Plans**
+
+We'll regularly assess your progress and make adjustments to your fitness and nutrition plans to ensure you're always moving toward your goals.
+
+1. **How do you currently track your fitness progress (e.g., through apps, journals, or fitness trackers)?**
+   - Follow-up: What metrics are most important to you (e.g., weight, strength gains, endurance levels)?
+
+2. **How often would you like to review and adjust your workout and diet plans?**
+   - Follow-up: Let's set up regular check-ins to celebrate your progress and make any necessary changes.
+
+**Global Nodes**: The AI will provide tools and resources for tracking your progress and adjusting your plans as needed. We'll celebrate your successes and work together to overcome any challenges.
+
+---
+
+#### **Section 5: Wellness and Mental Health Support**
+
+Fitness isn't just about the physical; it's also about mental and emotional well-being. We'll incorporate mindfulness practices and stress management techniques into your routine to support your overall health.
+
+1. **How do you manage stress and prioritize self-care in your life?**
+   - Follow-up: What relaxation or mindfulness practices do you find helpful?
+
+2. **How do you balance your fitness goals with the rest of your responsibilities (e.g., work, family, social life)?**
+   - Follow-up: Let's explore how we can integrate wellness practices into your daily routine to support your mental and emotional health.
+
+**Pathway Examples**: The AI will guide you through mindfulness exercises, stress-relief techniques, and other wellness practices that complement your fitness routine.
+
+---
+
+#### **Conclusion**
+
+Thank you for working with me on your fitness journey! We'll continue to refine your exercise routines, nutrition plans, and wellness practices as you progress toward your goals. If you ever need support or have any questions, I'm here to help. Let's keep moving forward together!

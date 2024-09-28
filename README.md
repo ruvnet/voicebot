@@ -5,6 +5,9 @@ This application allows users to practice mock interviews or engage in various A
 ## Demo
 https://ai-convo.replit.app/
 
+## Deploy it yourself.
+https://gitpod.io/#https://github.com/ruvnet/voicebot/voic-tsx
+
 ## Features
 <a href="https://ai-convo.replit.app/">
   <img src="https://github.com/ruvnet/voicebot/blob/main/assets/ai-convo.png?raw=true" alt="AI Conversation Bot" align="right" width="370px">
