@@ -142,6 +142,65 @@ server {
 }
 ```
 
+## JavaScript/TypeScript Application
+
+In addition to the Python application, there is a JavaScript/TypeScript application located in the `voic-tsx` directory. This application leverages modern web technologies such as React, TypeScript, and Vite to deliver a seamless and efficient user experience.
+
+### Features
+
+- **Prompt Management**: Easily manage and customize various prompts for different scenarios.
+- **Dynamic Intent Configuration**: Configure custom intents and tools dynamically.
+- **Phone Call Integration**: Integrate phone call functionalities with customizable settings.
+- **Advanced User Settings**: Detailed settings for advanced users to fine-tune the application.
+- **API Integration**: Seamless integration with external APIs for enhanced functionality.
+
+### Installation
+
+To get started with the JavaScript/TypeScript application, follow these steps:
+
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/ruvnet/voicebot.git
+   cd voicebot/voic-tsx
+   ```
+
+2. **Install dependencies**:
+   ```sh
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```sh
+   npm run dev
+   ```
+
+4. **Build the application for production**:
+   ```sh
+   npm run build
+   ```
+
+5. **Preview the production build**:
+   ```sh
+   npm run preview
+   ```
+
+### Configuration
+
+The JavaScript/TypeScript application provides various configuration options to customize its behavior. Here are some key configuration details:
+
+- **API Key**: Set your API key in the environment or in the settings.
+- **Webhook URL**: Configure the webhook URL for receiving call events.
+- **Voice Settings**: Customize voice settings using JSON strings.
+- **Context Management**: Enable and configure context management settings.
+- **External Tools**: Integrate external tools with customizable parameters.
+
+### Documentation
+
+For more detailed information, refer to the following documentation files:
+
+- [Instructions](docs/instructions.md)
+- [Intent](docs/intent.md)
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas for new conversation types or enhancements, feel free to submit a pull request.
@@ -149,4 +208,3 @@ Contributions are welcome! If you have any ideas for new conversation types or e
 ## License
 
 This project is licensed under the MIT License.
- 
