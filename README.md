@@ -3,8 +3,8 @@
 This application allows users to practice mock interviews or engage in various AI-driven conversations over the phone. It utilizes Flask as the backend framework and a third-party API for handling phone calls and voice interactions.
 
 ### Demos
-- Node.js/Typescript: https://ai-convo.replit.app/
-- Python: https://voic.gptengineer.run/
+- Python: https://ai-convo.replit.app/
+- Node.js/Typescript: https://voic.gptengineer.run/
 
 ### Deploy it yourself. (Node.js/Typescript)
 - https://gitpod.io/#https://github.com/ruvnet/voicebot/voic-tsx
